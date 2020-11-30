@@ -1,0 +1,19 @@
+.notification {
+  margin-top: 50px;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}

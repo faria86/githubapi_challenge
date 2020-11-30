@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import Repository from '../repository';
 import { get } from '../../services/githubapi';
 
+import './style.css';
+
 function Repositories(props) {
 
     const url = props.repositories_url;
@@ -18,12 +20,12 @@ function Repositories(props) {
                 })
         }
         return () => mounted = false;
-    }, [props.repositories_url]);
+    }, [url]);
 
     var total = repos ? repos.length : 0;
     return (
         <div className="repositories">
-            <h2>repositories <span className="total">{total}</span></h2>
+            <h2>Number of repositories <span className="total">{total}</span></h2>
             {repos.map((repo) => {
                 return <Repository value={repo} />
             })}

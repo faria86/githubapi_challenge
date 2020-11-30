@@ -1,0 +1,17 @@
+.repository {
+  padding: 20px 0 20px 0;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}

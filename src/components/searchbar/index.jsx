@@ -1,37 +1,34 @@
-import React, { Component } from "react";
-
+import React from 'react';
 import { Link } from "react-router-dom";
+import './style.css';
 
-class SearchBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: '',
-    };
+class Search extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: ''
+        };
 
-    this.handleChange = this.handleChange.bind(this);
-  };
+        this.handleChange = this.handleChange.bind(this);
+    }
 
-  handleChange(event) {
-    this.setState({ username: event.target.value });
-  };
+    handleChange(event) {
+        this.setState({ username: event.target.value });
+    }
 
-  render() {
-    return (
-      <div className='search-page'>
-        <input
-          name='username'
-          type='text'
-          className='search-page-input'
-          value={this.state.value}
-          onChange={this.handleChange}
-          required
-        />
+    render() {
+        return (
+            <div className="home">
+                <input name="username"
+                    type="text"
+                    placeholder="type username..."
+                    value={this.state.username}
+                    onChange={this.handleChange}
+                    required />
 
-        <Link to={`/${this.state.username}`} className="link">Search</Link>
-      </div>
-    );
-  }
+                <Link to={`/${this.state.username}`} className="link">search</Link>
+            </div >
+        )
+    }
 }
-
-export default SearchBar;
+export default Search;

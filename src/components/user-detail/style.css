@@ -1,0 +1,17 @@
+.user-detail {
+  padding: 50px;
+}
+
+.user-detail img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user-detail .name {
+  margin-top: 20px;
+  display: block;
+  font-size: 24px;
+}

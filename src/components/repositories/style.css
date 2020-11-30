@@ -1,0 +1,13 @@
+.repositories {
+  padding: 50px;
+  text-align: left;
+}
+
+.total {
+  background-color: rgb(68, 155, 68);
+  color: #fff;
+  border-radius: 30%;
+  font-weight: normal;
+  padding: 2px 12px;
+  font-size: 16px;
+}
