@@ -18,3 +18,13 @@ export async function getUser(username) {
 };
 
 
+export async function get(url) {
+  //console.log(`calling get: ${url}`);
+  return axios
+      .get(url)
+      .then((res) => res.data)
+      .catch((error) => {
+          console.log(error);
+          return { error: `Error searching from user repositories in github api!` }
+      });
+};
