@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import './style.css';
 
-class Search extends React.Component {
+class Search extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,7 +17,7 @@ class Search extends React.Component {
 
     render() {
         return (
-            <div className="home">
+            <div className="search">
                 <input name="username"
                     type="text"
                     placeholder="type username..."

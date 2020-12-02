@@ -1,18 +1,16 @@
-
 import React, { useEffect, useState } from 'react'
 import Repository from '../repository';
 import { get } from '../../services/githubapi';
 
 import './style.css';
 
-function Repositories(props) {
+function Repositories({ repositories_url }) {
 
-    const url = props.repositories_url;
     const [repos, setRepos] = useState([]);
     useEffect(() => {
         let mounted = true;
-        if (url) {
-            get(url)
+        if (repositories_url) {
+            get(repositories_url)
                 .then(data => {
                     if (mounted) {
                         setRepos(data)
@@ -20,14 +18,14 @@ function Repositories(props) {
                 })
         }
         return () => mounted = false;
-    }, [url]);
+    }, [repositories_url]);
 
     var total = repos ? repos.length : 0;
     return (
         <div className="repositories">
             <h2>Number of repositories <span className="total">{total}</span></h2>
-            {repos.map((repo) => {
-                return <Repository value={repo} />
+            {repos.map((repo, index) => {
+                return <Repository key={index} value={repo} />
             })}
         </div>
     )

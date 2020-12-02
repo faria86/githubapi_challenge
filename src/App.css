@@ -3,6 +3,23 @@
 .app {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar,
+.content,
+.footer {
+  margin: 20px 0 20px 0;
+}
+
+.navbar,
+.footer {
+  flex: 1;
+}
+
+.content {
+  flex: 4;
 }
 
 input {

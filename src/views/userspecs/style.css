@@ -1,7 +1,8 @@
 .notification {
-  margin-top: 50px;
+  color: red;
 }
 
+.notification,
 .container {
   margin-top: 50px;
 }

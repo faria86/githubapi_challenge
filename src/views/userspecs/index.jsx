@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+
 import UserDetail from '../../components/user-detail';
 import Repositories from '../../components/repositories';
+
 import { getUser } from '../../services/githubapi';
+
+import './style.css';
 
 function UserSpecs(props) {
 
