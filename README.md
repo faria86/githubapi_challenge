@@ -24,4 +24,7 @@ Services:
 
   * API: Using Axios to call github API, both to get username's and the repositories information.
 
-  
+Tests: 
+
+  * Tested API response to getUser(username)
+

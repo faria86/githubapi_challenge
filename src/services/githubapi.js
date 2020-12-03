@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+export const API = 'https://api.github.com';
+
 export async function getUser(username) {
     //console.log(`calling getUser: ${username}`);
     const searchUrl = `https://api.github.com/users/${username}`;
